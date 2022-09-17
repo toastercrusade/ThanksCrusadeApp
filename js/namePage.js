@@ -2,9 +2,8 @@
 
 const name = document.querySelector("#name");
 const update = document.getElementById("#generate");
-//const type = document.getElementById("typy");
 
-const words = [
+const miscWords = [
   "aerie",
   "alliance",
   "assembly",
@@ -137,19 +136,69 @@ const words = [
   "zeal",
 ];
 
+const busiWords = [
+    "corp",
+    "works",
+    "enterprises",
+    "firm",
+    "practice",
+    "shop",
+    "business",
+    "enterprise",
+    "trust",
+    "trade",
+    "company",
+    "organization",
+    "partners",
+    "outfit",
+    "store",
+    "establishment",
+    "market",
+    "commerce",
+    "exchange",
+    "dealings",
+];
+
 const getWord = () => {
-  const raw = words[Math.floor(Math.random() * Math.floor(words.length))];
-  const raw2 = words[Math.floor(Math.random() * Math.floor(words.length))];
-  const raw3 = words[Math.floor(Math.random() * Math.floor(words.length))];
-  var value = $("#typy :selected").value;
+  const raw = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
+  const raw2 = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
+  const raw3 = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
   var text = $("#typy :selected").text();
-  const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
-  const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-  const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
-  console.log(stylish);
-  const names = document.getElementById("newNames");
-  names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  if (text == "Misc company (none of these options describe you)") {
+    const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+    const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
+    const names = document.getElementById("newNames");
+    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  } else if (text == "Tech company"){
+    const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+    const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
+    const names = document.getElementById("newNames");
+    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  } else if (text == "Food company"){
+    const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+    const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
+    const names = document.getElementById("newNames");
+    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  } else if (text == "Design company"){
+    const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+    const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
+    const names = document.getElementById("newNames");
+    names.innerHTML = stylish + " " + stylish2 + " " + stylish3; 
+  } else if (text == "Financial company"){
+    const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+    const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
+    const names = document.getElementById("newNames");
+    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  } else {
+    console.log("broken");
+  };
+  
+  
   const busType = document.getElementById("busType");
-  busType.innerHTML = text + " " + value;
-  return stylish;
+  busType.innerHTML = text + " ";
 };
