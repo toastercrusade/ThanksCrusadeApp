@@ -138,9 +138,13 @@ const words = [
 
 const getWord = () => {
   const raw = words[Math.floor(Math.random() * Math.floor(words.length))];
+  const raw2 = words[Math.floor(Math.random() * Math.floor(words.length))];
+  const raw3 = words[Math.floor(Math.random() * Math.floor(words.length))];
   const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
+  const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
+  const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
   console.log(stylish);
   const names = document.getElementById("newNames");
-  names.innerHTML = stylish;
+  names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
   return stylish;
 };
