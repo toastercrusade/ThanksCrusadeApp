@@ -11,7 +11,89 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Home</title>
+    <title>Name Generator</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-2 navBar">
+          <div class="row user">
+            <div class="col-12 d-flex justify-content-center">
+              <img
+                class="user__pic"
+                src="img/9137063671548233621.svg"
+                alt="Sample User"
+              />
+            </div>
+            <div class="col-12">
+              <h3 class="user__name">John Doe</h3>
+            </div>
+          </div>
+          <div class="row nav">
+            <div class="col-12">
+              <a href="index.html"><h4 class="nav__link">Home</h4></a>
+              <a href="logoPage.html"
+                ><h4 class="nav__link">Logo Creation</h4></a
+              >
+              <a href="namePage.html"
+                ><h4 class="nav__link_active">Name Generator</h4></a
+              >
+              <a href="resourcesPage.html"
+                ><h4 class="nav__link">Resources</h4></a
+              >
+            </div>
+          </div>
+          <div class="row navExtra">
+            <div class="col-12">
+              <a href=""><h4 class="navExtra__link">Contact Us</h4></a>
+              <a href=""><h4 class="navExtra__link">Citations</h4></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12">
+              <div class="introMessage">
+                <h1 class="introMessage__title">Name Generator</h1>
+                <p class="introMessage__message">
+                  It's a common issue to be struggling with a name for your
+                  company when you are starting out. Fortunately, at Virtual
+                  Venture, we've got you covered. Type in some of your business'
+                  keywords separated using spaces or commas, and our algorithm
+                  will give you some sample names to get you inspired.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="logoTextContainer">
+                <h1 class="logoTextContainer__text">Enter Keywords</h1>
+                <input
+                  type="text"
+                  class="logoTextContainer__input"
+                  placeholder="Enter Your Ideas"
+                  aria-label="input"
+                  required=""
+                  id="logoInput"
+                  value=""
+                  autocomplete=""
+                />
+                <img
+                  class="logoTextContainer__glass"
+                  src="img/eyeglass.svg"
+                  alt="Eyeglass"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="nameContainer">
+                <h2 class="nameContainer__title">Sample Names</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
