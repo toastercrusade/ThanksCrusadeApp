@@ -11,6 +11,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src=""></script>
     <title>Name Generator</title>
   </head>
   <body>
@@ -68,22 +70,21 @@
           <div class="row">
             <div class="col-6">
               <div class="logoTextContainer">
-                <h1 class="logoTextContainer__text">Enter Keywords</h1>
-                <input
-                  type="text"
-                  class="logoTextContainer__input"
-                  placeholder="Enter Your Ideas"
-                  aria-label="input"
-                  required=""
-                  id="logoInput"
-                  value=""
-                  autocomplete=""
-                />
-                <img
-                  class="logoTextContainer__glass"
-                  src="img/eyeglass.svg"
-                  alt="Eyeglass"
-                />
+                <h3>Select which kind of company you are</h3>
+                <form>
+                  <select class="form-select target" aria-label="Default select example" id="typy">
+                    <option selected="selected">Which kind of company are you?</option>
+                    <option value="1">Tech company</option>
+                    <option value="2">Design company</option>
+                    <option value="3">Food company</option>
+                    <option value="4">Financial company</option>
+                    <option value="5">Misc company (none of these options fit you)</option>
+                  </select>
+                  <br>
+                </form>
+                <button class="btn btn-primary mb-3" id="generate">Generate names</button>
+                <div id="name"></div>
+                <!-- <img class="logoTextContainer__glass" src="img/eyeglass.svg" alt="Eyeglass"/> -->
               </div>
             </div>
             <div class="col-6">
