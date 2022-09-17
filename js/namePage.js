@@ -2,6 +2,7 @@
 
 const name = document.querySelector("#name");
 const update = document.getElementById("#generate");
+const type = document.getElementById("typy");
 
 const words = [
   "aerie",
@@ -140,11 +141,15 @@ const getWord = () => {
   const raw = words[Math.floor(Math.random() * Math.floor(words.length))];
   const raw2 = words[Math.floor(Math.random() * Math.floor(words.length))];
   const raw3 = words[Math.floor(Math.random() * Math.floor(words.length))];
+  var value = type.value;
+  var text = type.options[type.selectedIndex].text;
   const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
   const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
   const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
   console.log(stylish);
   const names = document.getElementById("newNames");
   names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+  const busType = document.getElementById("busType")
+  busType.innerHTML = text + " " + value;
   return stylish;
 };
