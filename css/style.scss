@@ -74,6 +74,7 @@ $text-color: #fff;
 
   // * Nav Bar * //
   .navBar {
+    position: fixed;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: $sidebar-blue;
@@ -283,5 +284,31 @@ $text-color: #fff;
         font-family: 'Roboto', sans-serif;  
         font-weight: $regular;
         padding-bottom: 1rem;
+    }
+}
+
+// ** Resources ** //
+.articles {
+    font-family: 'Roboto', sans-serif;  
+    font-weight: $regular;
+    background-color: lighten($fill-blue, 10);
+    color: $text-color;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    &__title {
+        font-size: 1.25rem;
+    }
+    &__length {
+        font-size: .6rem;
+        font-weight: $light;
+    }
+    &__preview {
+        font-size: .8rem;
+        font-style: italic;
+        font-weight: $regular;
+        margin: 0;
+        color: darken($text-color, 10);
     }
 }
