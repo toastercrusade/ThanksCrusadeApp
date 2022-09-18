@@ -157,48 +157,144 @@ const busiWords = [
     "commerce",
     "exchange",
     "dealings",
+    "sales",
+    "place",
+    "center",
+    "mart",
+    "nook",
+    "trove",
+];
+
+const techWords = [
+    "future ",
+    "digi-",
+    "algo",
+    "tech ",
+    "net ",
+    "auto",
+    "mecha-",
+    "robo-",
+    "electric ",
+    "sci-",
+    "industrial ",
+    "infinity ",
+    "one ",
+    "i",
+];
+
+const designWords = [
+    "craft ",
+    "art ",
+    "artistry ",
+    "abstract ",
+    "illustration ",
+    "illustrate ",
+    "drawn ",
+    "carved ",
+    "canvas ",
+    "painted ",
+    "woven",
+    "sewn ",
+    "designed ",
+    "arti-"
+];
+
+const foodWords = [
+    "food ",
+    "cooked ",
+    "cooks ",
+    "meal ",
+    "feed ",
+    "fed ",
+    "provision ",
+    "fodder ",
+    "chow ",
+    "grub ",
+    "ration ",
+    "nutrition ",
+    "nutri-",
+    "slop ",
+    "groceries ",
+    "bite ",
+    "snack ",
+    "pantry ",
+    "menu ",
+    "feast ",
+    "nourishment ",
+    "sustenance ",
+    "delectable ",
+    "sweet",
+    "salty ",
+    "savory ",
+    "sour ",
+    "salted ",
+    "sugary ",
+    "cheesy ",
+    "treat ",
+];
+
+const finaWords = [
+    "finance ",
+    "money ",
+    "moolah ",
+    "dinero ",
+    "bill ",
+    "cash ",
+    "capital ",
+    "wage ",
+    "coin ",
+    "loot ",
+    "treasure ",
+    "dough ",
+    "riches ",
+    "rich ",
+    "wad ",
+    "pay ",
+    "fund ",
+    "check ",
+    "bucks ",
+    "gold ",
+    "silver",
 ];
 
 const getWord = () => {
-  const raw = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
-  const raw2 = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
-  const raw3 = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
   var text = $("#typy :selected").text();
-  if (text == "Misc company (none of these options describe you)") {
+  if (text == "Misc company (none of these options fit you)") {
+    const raw = miscWords[Math.floor(Math.random() * Math.floor(miscWords.length))];
+    const raw2 = busiWords[Math.floor(Math.random() * Math.floor(busiWords.length))];
     const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
     const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
     const names = document.getElementById("newNames");
-    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+    names.innerHTML = stylish + " " +stylish2;
   } else if (text == "Tech company"){
+    const raw = techWords[Math.floor(Math.random() * Math.floor(techWords.length))];
+    const raw2 = busiWords[Math.floor(Math.random() * Math.floor(busiWords.length))];
     const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
     const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
     const names = document.getElementById("newNames");
-    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+    names.innerHTML = stylish + stylish2;
   } else if (text == "Food company"){
+    const raw = foodWords[Math.floor(Math.random() * Math.floor(foodWords.length))];
+    const raw2 = busiWords[Math.floor(Math.random() * Math.floor(busiWords.length))];
     const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
     const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
     const names = document.getElementById("newNames");
-    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
+    names.innerHTML = stylish + stylish2;
   } else if (text == "Design company"){
+    const raw = designWords[Math.floor(Math.random() * Math.floor(designWords.length))];
+    const raw2 = busiWords[Math.floor(Math.random() * Math.floor(busiWords.length))];
     const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
     const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
     const names = document.getElementById("newNames");
-    names.innerHTML = stylish + " " + stylish2 + " " + stylish3; 
+    names.innerHTML = stylish + stylish2;
   } else if (text == "Financial company"){
+    const raw = finaWords[Math.floor(Math.random() * Math.floor(finaWords.length))];
+    const raw2 = busiWords[Math.floor(Math.random() * Math.floor(busiWords.length))];
     const stylish = raw.charAt(0).toUpperCase() + raw.slice(1);
     const stylish2 = raw2.charAt(0).toUpperCase() + raw2.slice(1);
-    const stylish3 = raw3.charAt(0).toUpperCase() + raw3.slice(1);
     const names = document.getElementById("newNames");
-    names.innerHTML = stylish + " " + stylish2 + " " + stylish3;
-  } else {
-    console.log("broken");
+    names.innerHTML = stylish + stylish2;
+  } else if (text != "Which kind of company are you?") {
+    console.log("Broken");
   };
-  
-  
-  const busType = document.getElementById("busType");
-  busType.innerHTML = text + " ";
 };
