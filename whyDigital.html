@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+        });
+    </script>
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Resources</title>
   </head>
@@ -57,31 +66,48 @@
           <div class="row">
             <div class="col-12">
               <div class="introMessage">
-                <h1 class="introMessage__title">Resources</h1>
+                <h1 class="introMessage__title">Why should my business go digital?</h1>
                 <p class="introMessage__message">
-                  At VV, we are lucky to have an incredible team of experts in
-                  business digitizing. If you have any question regarding
-                  digitizing your business, you will almost certainly find an
-                  article answering your question down below. Check back often
-                  for new articles!
+                  We understand that if you are not experienced with computers, or technology in general, digitizing may seem 
+                  like a <em>daunting</em> task. But what you may not know is that going digital offers you numerous benefits!
                 </p>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="indent">More businesses than ever are going digital, and it's clear that it can be an effective way to extend, or introduce your company's product or services to the public. 
-                    As more and more of the population is switching over to a digital lifestyle, the desire for online businesses is at an all time high. 
-                    You have the ability to control how the consumer interprets your company more than ever before, through professional design. 
-                    Businesses, large, small, local and global can all gain tremendous revenue and recognition with a well-designed online business. 
-                    The use of software can be used to benefit your company significantly, such as:
-                    <li>Human error is limited to a minimum</li>
-                    <li>Data analysis is much more condensed</li>
-                    <li>Using automation saves a lot of time </li>
+                <br>
+                <p class="indent ml-40">More businesses than ever are going digital, and it's clear that digitizing is the future! History 
+                    has shown that digitizing your business can be an effective way to extend, or introduce, your company's products or services 
+                    to the public. Going digital gives your company the ability to control how the consumer interprets your company more than ever before!
+                    Businesses, large, small, local and global have been shown to all gain tremendous revenue and recognition with a 
+                    well-designed online business. Furthermore, the use of <a href="#" data-toggle="tooltip" title="Buying and selling through websites"><b>eCommerce</b></a> 
+                    can be used to benefit your company in many other ways, with benefits such as:
+                    <li>Human error being limited to a minimum</li>
+                    <li>Data analysis being much more condensed and faster to complete</li>
+                    <li>Automation saving large amounts of time</li>
                     <br>
                     Before building your virtual business, consider the following steps:
-                    Generating a strong name
-                    Designing an effective logo
-                    Having a good idea of what products/services you want to sell
+                    <br>
+                    <li>Choosing a strong name for your business</li>
+                    <li>Designing an effective logo</li>
+                    <li>Having a good idea of what products/services you want to sell</li>
+                    </p>
+                    <br>
+                    <h3>Choosing a strong business name</h1>
+                    <p class="ml-40">The name of your business is your customers' first experience with your brand. If your name is confusing, hard to remember, or is distasteful,
+                        it may leave customers having poor impressions of your brand. Consider using our <a href="./namePage.html" target="_blank">name generator</a> to help with the brainstorming process.
+                    </p>
+                    <br>
+                    <h3>Designing an effective logo</h1>
+                    <p class="ml-40">Your business' logo is the face of your business. 
+                        Noisy, undetailed, or extremely unproffessional logos give an impression that your business is not as 
+                        polished as your competitors Consider using our <a href="./logoPage.html" target="_blank">logo generator</a>
+                         to help with your logo design.
+                    </p>
+                    <br>
+                    <h3>Deciding which products to sell and how to present them</h1>
+                    <p class="ml-40">A lack of focus in your sales may lead to customers having <a href="#" data-toggle="tooltip" title="A state of mental overload that can impede a person's ability to continue making decisions"><b>decision fatigue</b></a>.  
+                        Consider making the focus of your website your best-selling items, and then offer packages or small deals to get the poorer perforners off the shelves.
                     </p>
               </div>
             </div>
