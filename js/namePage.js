@@ -1,8 +1,7 @@
-// A handy pen for generating random project names. Intended to be used instead of generic phrases like "test project 123" etc. Words orignially taken from Glitch friendly word repo and expanded occasionally.
+const name = document.querySelector("#name"); // Where the name is displayed
+const update = document.getElementById("#generate"); // Gets the button on the namePage
 
-const name = document.querySelector("#name");
-const update = document.getElementById("#generate");
-
+// A list of words used in the name of miscellaneous businesses
 const miscWords = [
   "aerie",
   "alliance",
@@ -136,6 +135,7 @@ const miscWords = [
   "zeal",
 ];
 
+// A list of words used in the name of all businesses, the second word in the name
 const busiWords = [
     "corp",
     "works",
@@ -165,6 +165,7 @@ const busiWords = [
     "trove",
 ];
 
+// A list of words used in the name of tech businesses
 const techWords = [
     "future ",
     "digi-",
@@ -182,6 +183,7 @@ const techWords = [
     "i",
 ];
 
+// A list of words used in the name of art/design businesses
 const designWords = [
     "craft ",
     "art ",
@@ -199,6 +201,7 @@ const designWords = [
     "arti-"
 ];
 
+// A list of words used in the name of food-related businesses
 const foodWords = [
     "food ",
     "cooked ",
@@ -233,6 +236,7 @@ const foodWords = [
     "treat ",
 ];
 
+// A list of words used in the name of financial-related businesses
 const finaWords = [
     "finance ",
     "money ",
@@ -257,6 +261,10 @@ const finaWords = [
     "silver",
 ];
 
+/*
+* Generates a name by seeing which type of business the user has, making two random numbers, 
+* seeing what word corresponds to that number in the list, attaching them together, and then displaying the generated name.
+*/
 const getWord = () => {
   var text = $("#typy :selected").text();
   if (text == "Misc company (none of these options fit you)") {
